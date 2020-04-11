@@ -7,7 +7,7 @@ import requests
 BOTS={}
 BOTS_SESSION={} #每一个进程对应的SafeSession
 BOT_CONFIG={} #机器人通用配置
-SRV_BIND_IP='192.168.0.1'
+SRV_BIND_IP='127.0.0.1'
 SRV_LISTEN_PORT=8000
 
 class jsonconf():
