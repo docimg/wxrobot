@@ -1,4 +1,4 @@
-FROM python:2.7-buster
+FROM python:2.7-slim
 
 RUN mkdir -p /home/wxRobot
 
@@ -7,4 +7,6 @@ COPY / /home/wxRobot
 RUN cd /home/wxRobot && \
     pip install -r requirements.txt
 
-CMD python /home/wxRobot/robsSrv.py start > /home/wxRobot/server.log & && tail -F /dev/null
+EXPOSE 8081
+
+CMD ["python","robsSrv.py",">server.log"]
