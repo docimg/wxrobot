@@ -11,4 +11,4 @@ WORKDIR /home/wxRobot
 
 EXPOSE 8081
 
-CMD ["python","robsSrv.py"]
+CMD ["python","/home/wxRobot/robsSrv.py"]
