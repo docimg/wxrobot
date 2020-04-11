@@ -5,7 +5,6 @@ RUN mkdir -p /home/wxRobot
 COPY / /home/wxRobot
 
 RUN cd /home/wxRobot && \
-    apt install -y python-pip && \
     pip install --trusted-host pypi.python.org -r requirements.txt
 
 WORKDIR /home/wxRobot
