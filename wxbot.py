@@ -1316,6 +1316,7 @@ class WXBot:
         r = self.session.get(self.redirect_uri)
         r.encoding = 'utf-8'
         data = r.text
+        print data
         doc = xml.dom.minidom.parseString(data)
         root = doc.documentElement
 

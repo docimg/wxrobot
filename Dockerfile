@@ -1,3 +1,9 @@
-FROM python:3.7.7-buster
+FROM python:2.7.5-buster
 
-COPY / /tmp
+RUN mkdir -p /home/wxRobot
+
+COPY / /home/wxRobot
+
+RUN cd /home/wxRobot && \
+    pip install -r requirements.txt && \
+    python robsSrv.py

@@ -32,7 +32,7 @@ from daemon import Daemon
 
 define("port", default=SRV_LISTEN_PORT, help="run on the given port", type=int)
 define("debug", default=False, help="run in debug mode")
-deploy_dir = 'D:\\WePlus\\wxRobot' if sys.platform.startswith('win') else '/home/wxRobot'
+deploy_dir = os.path.split(os.path.realpath(__file__))[0] if sys.platform.startswith('win') else '/home/wxRobot'
 
 class RobotsHandler(tornado.web.RequestHandler):
     def get_user_plugs(self,wxBot):
