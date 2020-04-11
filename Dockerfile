@@ -1,4 +1,4 @@
-FROM python:2.7.5-buster
+FROM python:2.7-buster
 
 RUN mkdir -p /home/wxRobot
 
